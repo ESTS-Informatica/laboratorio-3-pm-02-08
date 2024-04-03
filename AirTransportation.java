@@ -13,14 +13,17 @@ public class AirTransportation extends Transport
 
     public AirTransportation(String name,int numberOfContainers)
     {
+        super();
+        super.setFees(AIR_FEES);
         this.name = "";
         this.numberOfContainers = 0;
-        this.fees = AIR_FEES;
+    
     }
 
     public double getFees() {
         return AIR_FEES;
     }
+    
 
     //nivel 2
     //gets e sets
@@ -40,8 +43,9 @@ public class AirTransportation extends Transport
         this.numberOfContainers = numberOfContainers;
     }
 
-    public double getPriceWithFees() {
-        return super.getPriceWithFees();
+    @Override
+    public double getPriceWithFees () {
+         return super.getPrice() * (1.0 + (this.fees * 0.01));
     }
     
     public String getTransportType() {
