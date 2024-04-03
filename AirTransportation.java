@@ -22,6 +22,7 @@ public class AirTransportation extends Transport
         return AIR_FEES;
     }
     
+    //nivel 2
     //gets e sets
     public String getName(){
         return this.name;
