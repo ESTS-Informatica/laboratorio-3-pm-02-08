@@ -10,7 +10,7 @@ public class GroundTransportation extends Transport
     public GroundTransportation() {
          super();
         super.setFees(GROUND_FEES);
-        this.licensePlate = "";
+        this.licensePlate = licensePlate;
 
     }
 
@@ -27,7 +27,7 @@ public class GroundTransportation extends Transport
     }
 
     public double getPriceWithFees() {
-        return super.getPrice() * (1.0 + (this.fees * 0.01));
+        return super.getPrice() * (1.0 + (getFees() * 0.01));
     }
     public String getTransportType() {
         return "Transporte Terrestre";
